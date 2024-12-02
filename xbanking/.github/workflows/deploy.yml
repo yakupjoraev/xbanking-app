@@ -19,13 +19,13 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: cd xbanking && npm install
+        run: npm install
 
       - name: Build
-        run: cd xbanking && npm run build
+        run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: xbanking/dist
+          folder: dist
           branch: gh-pages
