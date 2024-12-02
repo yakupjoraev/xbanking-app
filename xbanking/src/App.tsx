@@ -12,8 +12,8 @@ function App() {
         <Header />
 
         <div className='flex-grow'>
-          <Dashboard title="Your xBanking Dashboard" />
-          <StakeEarn title="Stake & Earn with xBanking" />
+          <Dashboard title="Dashboard" />
+          <StakeEarn title="Stake & Earn" />
         </div>
 
         <Footer />

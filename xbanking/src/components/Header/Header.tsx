@@ -32,7 +32,7 @@ export default function Header() {
                         <ul className='flex gap-5 items-center md:flex-col'>
                             <li className='md:w-full flex'>
                                 <a href="" className='min-w-32 w-fit py-[10px] px-6 bg-purple rounded-lg 
-                            text-white font-semibold text-base border-2 border-transparent
+                            text-white font-semibold text-center text-base border-2 border-transparent
                             transition-all duration-300 hover:text-yellow hover:border-yellow hover:bg-transparent
                             xl:py-2 xl:px-4 lg:py-2 lg:px-3 lg:min-w-24 md:w-full md:text-center'>
                                     Dashboard
@@ -40,7 +40,7 @@ export default function Header() {
                             </li>
                             <li className='md:w-full flex'>
                                 <a href="" className='min-w-32 w-fit py-[10px] px-6 bg-transparent rounded-lg 
-                            text-black font-semibold text-base border-2 border-yellow
+                            text-black font-semibold text-center text-base border-2 border-yellow
                             transition-all duration-300 hover:text-yellow hover:border-yellow
                             xl:py-2 xl:px-4 lg:py-2 lg:px-3 lg:min-w-24 md:w-full md:text-center'>
                                     Support
