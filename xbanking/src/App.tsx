@@ -14,7 +14,7 @@ function App() {
       <div className='flex flex-col min-h-screen'>
         <Header onDashboardClick={() => setIsLoginModalOpen(true)} />
 
-        <div className='flex-grow'>
+        <div className='flex-grow main-bg'>
           <Dashboard title="Dashboard" />
           <StakeEarn title="Stake & Earn" />
         </div>

@@ -5,3 +5,22 @@
 .filter-social:hover img {
   filter: invert(38%) sepia(93%) saturate(1277%) hue-rotate(184deg) brightness(103%) contrast(101%);
 }
+
+.main-bg {
+  background-image: image-set(
+    url('/img/bg/bg.webp') 1x type('image/webp'),
+    url('/img/bg/bg.png') 1x,
+    url('/img/bg/bg@2x.webp') 2x type('image/webp'),
+    url('/img/bg/bg@2x.png') 2x
+  );
+  background-image: -webkit-image-set(
+    url('/img/bg/bg.webp') 1x type('image/webp'),
+    url('/img/bg/bg.png') 1x,
+    url('/img/bg/bg@2x.webp') 2x type('image/webp'),
+    url('/img/bg/bg@2x.png') 2x
+  );
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
