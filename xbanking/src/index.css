@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.filter-social:hover img {
+  filter: invert(38%) sepia(93%) saturate(1277%) hue-rotate(184deg) brightness(103%) contrast(101%);
+}

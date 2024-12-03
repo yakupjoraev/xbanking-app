@@ -1,4 +1,8 @@
 import Logo from '/img/logo.svg'
+import Telegram from '/img/bxl_telegram.svg'
+import Twitter from '/img/bxl_twitter.svg'
+import Medium from '/img/bxl_medium.svg'
+import Youtube from '/img/bxl_youtube.svg'
 
 export default function Footer() {
   return (
@@ -135,34 +139,23 @@ export default function Footer() {
           <div className='flex flex-col gap-5 justify-between h-full lg:w-full lg:items-center'>
             <ul className='flex items-center gap-6 justify-end'>
               <li>
-                <a href="https://t.me/xbanking" target="_blank" className='text-grey hover:text-blue transition-all duration-300'>
-                  <svg width="26" height="26" className="fill-current">
-                    <use xlinkHref="/sprite.svg#telegram" />
-                  </svg>
+                <a href="https://t.me/xbanking" target="_blank" className='transition-all duration-300 filter-social'>
+                  <img src={Telegram} alt="Telegram icon" width={26} height={26} />
                 </a>
               </li>
-
               <li>
-                <a href="https://x.com/xbanking_org" target="_blank" className='text-grey hover:text-blue transition-all duration-300'>
-                  <svg width="26" height="26" className="fill-current">
-                    <use xlinkHref="/sprite.svg#twitter" />
-                  </svg>
+                <a href="https://x.com/xbanking_org" target="_blank" className='transition-all duration-300 filter-social'>
+                  <img src={Twitter} alt="Twitter icon" width={26} height={26} />
                 </a>
               </li>
-
               <li>
-                <a href="https://xbanking.medium.com/" target="_blank" className='text-grey hover:text-blue transition-all duration-300'>
-                  <svg width="26" height="26" className="fill-current">
-                    <use xlinkHref="/sprite.svg#medium" />
-                  </svg>
+                <a href="https://xbanking.medium.com/" target="_blank" className='transition-all duration-300 filter-social'>
+                  <img src={Medium} alt="Medium icon" width={26} height={26} />
                 </a>
               </li>
-
               <li>
-                <a href="https://youtube.com/@xbanking" target="_blank" className='text-grey hover:text-blue transition-all duration-300'>
-                  <svg width="26" height="26" className="fill-current">
-                    <use xlinkHref="/sprite.svg#youtube" />
-                  </svg>
+                <a href="https://youtube.com/@xbanking" target="_blank" className='transition-all duration-300 filter-social'>
+                  <img src={Youtube} alt="Youtube icon" width={26} height={26} />
                 </a>
               </li>
             </ul>
