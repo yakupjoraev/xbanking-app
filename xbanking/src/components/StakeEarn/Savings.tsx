@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import IconArrow from '/img/arrow-down.svg'
-import Search from '/img/search.svg'
-import Solana from '/img/tokens/solana.svg'
-import Bitcoin from '/img/tokens/bitcoin.svg'
-import Toncoin from '/img/tokens/toncoin.svg'
-import Arbitrum from '/img/tokens/arbitrum.svg'
-import Avalanche from '/img/tokens/avalanche.svg'
-import Binance from '/img/tokens/binance.svg'
-import Ethereum from '/img/tokens/ethereum.svg'
+import { useState } from 'react';
+import IconArrow from '/img/arrow-down.svg';
+import Search from '/img/search.svg';
+import Solana from '/img/tokens/solana.svg';
+import Bitcoin from '/img/tokens/bitcoin.svg';
+import Toncoin from '/img/tokens/toncoin.svg';
+import Arbitrum from '/img/tokens/arbitrum.svg';
+import Avalanche from '/img/tokens/avalanche.svg';
+import Binance from '/img/tokens/binance.svg';
+import Ethereum from '/img/tokens/ethereum.svg';
 
 interface Token {
   id: string;
@@ -23,7 +23,7 @@ const tokens: Token[] = [
   { id: 'avalanche', name: 'Avalanche', icon: Avalanche },
   { id: 'binance', name: 'Binance', icon: Binance },
   { id: 'ethereum', name: 'Ethereum', icon: Ethereum },
-]
+];
 
 export default function Savings() {
   const [openAccordion, setOpenAccordion] = useState<'tokens' | 'networks' | null>(null);
@@ -47,12 +47,14 @@ export default function Savings() {
   return (
     <div className="flex flex-col gap-3 bg-white">
       {/* Токены */}
-      <div className={`relative bg-lite-grey border-transparent p-4 min-h-16 ${openAccordion === 'tokens' ? 'rounded-t-2xl rounded-b-none' : 'rounded-2xl'}`}>
+      <div
+        className={`relative bg-lite-grey border-transparent p-4 min-h-16 ${openAccordion === 'tokens' ? 'rounded-t-2xl rounded-b-none' : 'rounded-2xl'}`}
+      >
         <div
           className="flex justify-between items-center gap-3 cursor-pointer"
           onClick={() => toggleAccordion('tokens')}
         >
-          <span className="font-semibold text-lg w-full text-grey">
+          <span className="font-semibold text-base w-full text-grey">
             {selectedToken ? selectedToken.name : 'Select Token'}
           </span>
           <img
@@ -78,12 +80,12 @@ export default function Savings() {
                   type="text"
                   placeholder="Search token"
                   value={tokenSearchQuery}
-                  onChange={(e) => setTokenSearchQuery(e.target.value)}
+                  onChange={e => setTokenSearchQuery(e.target.value)}
                   className="w-full p-4 pl-12 bg-white rounded-xl outline-none text-sm"
                 />
               </div>
               <div className="mt-4 max-h-[300px] overflow-y-auto">
-                {filteredTokens.map((token) => (
+                {filteredTokens.map(token => (
                   <div
                     key={token.id}
                     className="flex items-center gap-3 p-3 hover:bg-lite-grey rounded-xl cursor-pointer"
@@ -103,29 +105,29 @@ export default function Savings() {
       </div>
 
       <div className="flex flex-col border-transparent min-h-16 overflow-hidden rounded-lg">
-        <div className='flex justify-between items-center gap-2 py-2 px-4 bg-green'>
-          <span className='font-bold text-base text-white'>Annual staking reward (APR):</span>
-          <span className='font-bold text-base text-white'>3.08%</span>
+        <div className="flex justify-between items-center gap-2 py-2 px-4 bg-green">
+          <span className="font-bold text-base text-white">Annual staking reward (APR):</span>
+          <span className="font-bold text-base text-white">3.08%</span>
         </div>
 
-        <div className='py-3 px-4 bg-lite-green'>
+        <div className="py-3 px-4 bg-lite-green">
           <ul>
-            <li className='flex justify-between items-center gap-2'>
+            <li className="flex justify-between items-center gap-2">
               <span>Daily yield:</span>
               <span>0 XB</span>
             </li>
 
-            <li className='flex justify-between items-center gap-2'>
+            <li className="flex justify-between items-center gap-2">
               <span>Monthly yield:</span>
               <span>0 XB</span>
             </li>
 
-            <li className='flex justify-between items-center gap-2'>
+            <li className="flex justify-between items-center gap-2">
               <span>Annual yield:</span>
               <span>0 XB</span>
             </li>
 
-            <li className='flex justify-between items-center gap-2'>
+            <li className="flex justify-between items-center gap-2">
               <span>Total profit:</span>
               <span>0 XB</span>
             </li>
@@ -134,12 +136,14 @@ export default function Savings() {
       </div>
 
       {/* Сети */}
-      <div className={`relative bg-lite-grey border-transparent p-4 min-h-16 ${openAccordion === 'networks' ? 'rounded-t-2xl rounded-b-none' : 'rounded-2xl'}`}>
+      <div
+        className={`relative bg-lite-grey border-transparent p-4 min-h-16 ${openAccordion === 'networks' ? 'rounded-t-2xl rounded-b-none' : 'rounded-2xl'}`}
+      >
         <div
           className="flex justify-between items-center gap-3 cursor-pointer"
           onClick={() => toggleAccordion('networks')}
         >
-          <span className="font-semibold text-lg w-full text-grey">
+          <span className="font-semibold text-base w-full text-grey">
             {selectedNetwork ? selectedNetwork.name : 'Select Network'}
           </span>
           <img
@@ -165,12 +169,12 @@ export default function Savings() {
                   type="text"
                   placeholder="Search network"
                   value={networkSearchQuery}
-                  onChange={(e) => setNetworkSearchQuery(e.target.value)}
+                  onChange={e => setNetworkSearchQuery(e.target.value)}
                   className="w-full p-4 pl-12 bg-white rounded-xl outline-none text-sm"
                 />
               </div>
               <div className="mt-4 max-h-[300px] overflow-y-auto">
-                {filteredNetworks.map((network) => (
+                {filteredNetworks.map(network => (
                   <div
                     key={network.id}
                     className="flex items-center gap-3 p-3 hover:bg-lite-grey rounded-xl cursor-pointer"
@@ -194,10 +198,13 @@ export default function Savings() {
           <input
             type="number"
             className="bg-transparent border border-transparent rounded-2xl outline-none 
-            font-semibold text-lg w-full placeholder:text-grey"
-            placeholder="Enter amount" />
+            font-semibold text-base w-full placeholder:text-grey"
+            placeholder="Enter amount"
+          />
 
-          <span className="py-2 px-3 bg-blue rounded-[40px] font-semibold text-sm text-white">Max</span>
+          <span className="py-2 px-3 bg-blue rounded-[40px] font-semibold text-sm text-white">
+            Max
+          </span>
         </div>
       </div>
 
@@ -205,9 +212,10 @@ export default function Savings() {
         type="button"
         className="w-full p-4 font-semibold text-lg 
         bg-blue rounded-lg text-white transition-all duration-300 
-        hover:bg-yellow hover:text-black">
+        hover:bg-yellow hover:text-black"
+      >
         Confirm and Stake
       </button>
-    </div >
-  )
+    </div>
+  );
 }

@@ -21,6 +21,34 @@
   );
 
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
+}
+
+@media (min-width: 2000px) {
+  .main-bg {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1400px) {
+  .main-bg {
+    background-position: top;
+    background-size: contain;
+  }
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #8b8b8b;
+  z-index: 1;
+}
+.tab.active::before {
+  height: 2px;
+  background-color: #0c0c0c;
 }
